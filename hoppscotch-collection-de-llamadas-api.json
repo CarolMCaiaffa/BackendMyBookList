@@ -1,0 +1,155 @@
+[
+  {
+    "name": "BookStore",
+    "folders": [
+      {
+        "folders": [],
+        "v": 1,
+        "requests": [
+          {
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "endpoint": "http://localhost:3000/api/users/register",
+            "testScript": "",
+            "name": "register-user",
+            "v": "1",
+            "params": [],
+            "preRequestScript": "",
+            "method": "POST",
+            "headers": [],
+            "body": {
+              "body": "{\n  \"username\": \"julian-g\",\n  \"email\": \"julian-gutierrez@gmail.com\",\n  \"password\": \"1234Abcd!\"\n}",
+              "contentType": "application/json"
+            }
+          },
+          {
+            "endpoint": "http://localhost:3000/api/users/login",
+            "params": [],
+            "v": "1",
+            "auth": {
+              "authActive": true,
+              "authType": "none"
+            },
+            "body": {
+              "body": "{\n  \"usernameOrEmail\": \"julian-gutierrez@gmail.com\",\n  \"password\": \"1234Abcd!\"\n}",
+              "contentType": "application/json"
+            },
+            "name": "login-user",
+            "preRequestScript": "",
+            "testScript": "",
+            "method": "POST",
+            "headers": []
+          },
+          {
+            "testScript": "",
+            "preRequestScript": "",
+            "auth": {
+              "authActive": true,
+              "authType": "none"
+            },
+            "v": "1",
+            "headers": [
+              {
+                "value": "b07f774a-d558-4ec0-9ca3-8285453200cf-de1fbc87-2360-4105-8bfb-81a654847f7c",
+                "active": true,
+                "key": "API-Key"
+              }
+            ],
+            "name": "users-list",
+            "endpoint": "http://localhost:3000/api/users",
+            "method": "GET",
+            "body": {
+              "body": "{\n  \"title\": \"el ataque de las sandias\",\n  \"author\": \"maria sandia\",\n  \"genre\": \"ficcion\",\n  \"year\": 2002,\n  \"rating\": 4,\n  \"summary\": \"hsiistoria de sndias modificadas geneticamentes que empiezan una gerra mundial\"\n}",
+              "contentType": "application/json"
+            },
+            "params": []
+          }
+        ],
+        "name": "users"
+      },
+      {
+        "folders": [],
+        "requests": [
+          {
+            "preRequestScript": "",
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "headers": [
+              {
+                "value": "b07f774a-d558-4ec0-9ca3-8285453200cf-de1fbc87-2360-4105-8bfb-81a654847f7c",
+                "key": "API-Key",
+                "active": true
+              }
+            ],
+            "v": "1",
+            "endpoint": "http://localhost:3000/api/books",
+            "testScript": "",
+            "params": [],
+            "method": "POST",
+            "name": "books-create",
+            "body": {
+              "body": "{\n  \"title\": \"el ataque de los meloned\",\n  \"author\": \"maria melon\",\n  \"genre\": \"ficcion\",\n  \"year\": 2009,\n  \"rating\": 4,\n  \"summary\": \"hsiistoria de melones modificadas geneticamentes que empiezan una gerra mundial\"\n}",
+              "contentType": "application/json"
+            }
+          },
+          {
+            "body": {
+              "body": "{\n  \"title\": \"el ataque de las sandias\",\n  \"author\": \"maria sandia\",\n  \"genre\": \"ficcion\",\n  \"year\": 2002,\n  \"rating\": 4,\n  \"summary\": \"hsiistoria de sndias modificadas geneticamentes que empiezan una gerra mundial\"\n}",
+              "contentType": "application/json"
+            },
+            "preRequestScript": "",
+            "endpoint": "http://localhost:3000/api/books",
+            "name": "books-list",
+            "headers": [
+              {
+                "active": true,
+                "value": "b07f774a-d558-4ec0-9ca3-8285453200cf-de1fbc87-2360-4105-8bfb-81a654847f7c",
+                "key": "API-Key"
+              }
+            ],
+            "v": "1",
+            "method": "GET",
+            "params": [],
+            "testScript": "",
+            "auth": {
+              "authActive": true,
+              "authType": "none"
+            }
+          },
+          {
+            "name": "user-get",
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n  \"title\": \"el ataque de las sandias\",\n  \"author\": \"maria sandia\",\n  \"genre\": \"ficcion\",\n  \"year\": 2002,\n  \"rating\": 4,\n  \"summary\": \"hsiistoria de sndias modificadas geneticamentes que empiezan una gerra mundial\"\n}"
+            },
+            "auth": {
+              "authActive": true,
+              "authType": "none"
+            },
+            "testScript": "",
+            "preRequestScript": "",
+            "params": [],
+            "headers": [
+              {
+                "value": "b07f774a-d558-4ec0-9ca3-8285453200cf-de1fbc87-2360-4105-8bfb-81a654847f7c",
+                "key": "API-Key",
+                "active": true
+              }
+            ],
+            "method": "GET",
+            "v": "1",
+            "endpoint": "http://localhost:3000/api/books/{userId}"
+          }
+        ],
+        "v": 1,
+        "name": "books"
+      }
+    ],
+    "requests": [],
+    "v": 1
+  }
+]
